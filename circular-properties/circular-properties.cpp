@@ -35,6 +35,7 @@ int main()
 	cout << endl;
 	
 	cout << "2D circle of radius " << radius << " with " << sigdigs << " significant digit(s)." << endl;
+	cout << "Diameter of circle: " << setprecision(sigdigs) << 2*radius << endl;
 	cout << "Area of circle: " << setprecision(sigdigs) << M_PI*pow(radius,2) << endl;
 	cout << "Perimeter of circle: " << setprecision(sigdigs) << 2*M_PI*radius << endl;
 	cout << endl;
