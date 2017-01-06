@@ -14,9 +14,14 @@ int main()
 	cout << "It gives you info on 2D circles, spheres, and even cylinders!" <<endl;
 	cout << "Enter 0 for the number of sig digs to get the default, 8." << endl;
 	cout << endl;
+	
+	//All variables will be initialized here.
+	
 	float radius = 1;
-	int sigdigs = 6;
-	int usersigdigs;
+	int sigdigs = 1;
+	int usersigdigs = 1;
+	float height = 1;
+	
 	cout << "Circle radius: "; 
 	cin >> radius;
 	cout << "Desired sig digs: ";
@@ -35,8 +40,20 @@ int main()
 	cout << endl;
 	
 	cout << "Sphere of radius " << radius << " with " << sigdigs << " significant digit(s)." <<endl;
-	cout << "Volume of sphere: " << setprecision (sigdigs) << 4*M_PI*pow(radius,3)/3 << endl;
-	cout << "Surface area of sphere: " << setprecision (sigdigs) << 4*M_PI*pow(radius,2) << endl;
+	cout << "Volume of sphere: " << setprecision(sigdigs) << 4*M_PI*pow(radius,3)/3 << endl;
+	cout << "Surface area of sphere: " << setprecision(sigdigs) << 4*M_PI*pow(radius,2) << endl;
+	cout << endl;
+	
+	cout << "Beginning cylinder calculations. Press ctrl-c to terminate." << endl;
+	cout << "Cylinder height: ";
+	cin >> height;
+	cout << endl;
+	
+	cout << "Cylinder of radius " << radius << " and height " << height << " with " << sigdigs << " significant digit(s)." << endl;
+	cout << "Volume of cylinder: " << setprecision(sigdigs) << M_PI*pow(radius,2)*height << endl;
+	cout << "Surface area of cylinder side: " << setprecision(sigdigs) << 2*M_PI*radius*height << endl;
+	cout << "Surface area of cylinder tops: " << setprecision(sigdigs) << 2*M_PI*pow(radius,2) << endl;
+	cout << "Total cylinder surface area: " << setprecision(sigdigs) << (2*M_PI*radius*height)+(2*M_PI*pow(radius,2)) << endl;
 	cout << endl;
 	
 	return 0;
