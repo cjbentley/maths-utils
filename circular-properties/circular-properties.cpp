@@ -17,10 +17,10 @@ int main()
 	
 	//All variables will be initialized here.
 	
-	float radius = 1;
+	double radius = 1;
 	int sigdigs = 1;
 	int usersigdigs = 1;
-	float height = 1;
+	double height = 1;
 	
 	cout << "Circle radius: "; 
 	cin >> radius;
